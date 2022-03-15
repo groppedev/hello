@@ -17,6 +17,9 @@ environment variable to the container definition and run the new pod.
 
     $ curl locahost:8080
      Hello OpenShift for Developers!
+     
+    $ curl http://s2i-go-v1:8080
+     Hello OpenShift for Developers!
 
 To test from external network, you need to create router.
 

@@ -14,3 +14,17 @@ Note: this example app is derived from the [example at sclorg/golang-ex](https:/
 The response message can be set by using the RESPONSE environment
 variable.  You will need to edit the pod definition and add an
 environment variable to the container definition and run the new pod.
+
+    $ curl locahost:8080
+     Hello World!
+
+To test from external network, you need to create router.
+
+The container doesn't expose any ports, this will require you to expose it manually.
+For example:
+
+    $ oc expose dc/golang-ex --port=8080
+
+and lastly if you want to expose a route, by doing:
+
+    $ oc expose service/golang-ex

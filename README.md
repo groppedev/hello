@@ -6,7 +6,7 @@ intended to be build and used with the [Golang Source-to-Image builder image](ht
 You can deploy this application on OpenShift using the following command:
 
 ```shell
-oc new-app golang~https://github.com/groppedev/hello
+oc new-app golang~https://github.com/groppedev/hello --name=s2i-go-v1 -l app=s2i-go-v1
 ```
 
 Note: this example app is derived from the [example at sclorg/golang-ex](https://github.com/sclorg/golang-ex).
@@ -23,8 +23,8 @@ To test from external network, you need to create router.
 The container doesn't expose any ports, this will require you to expose it manually.
 For example:
 
-    $ oc expose dc/golang-ex --port=8080
+    $ oc expose dc/s2i-go-v1 --port=8080
 
 and lastly if you want to expose a route, by doing:
 
-    $ oc expose service/golang-ex
+    $ oc expose service/s2i-go-v1

@@ -16,7 +16,7 @@ variable.  You will need to edit the pod definition and add an
 environment variable to the container definition and run the new pod.
 
     $ curl locahost:8080
-     Hello World!
+     Hello OpenShift for Developers!
 
 To test from external network, you need to create router.
 
